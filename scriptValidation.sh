@@ -2,16 +2,16 @@
 echo "Vous allez devoir entrer votre mot de passe pour installer Vagrant. "
 sudo apt-get install vagrant 
 vagrant init
-$choixBox=0
+choixBox=0
 until [ "$choixBox" = "1" ] || [ "$choixBox" = "2" ];
 do
 echo "Vous etes sur le point de créer une Vagrant, choisissez une version de box:"
 read -p "Tapez \"1\" puis Entree pour xenial64; Tapez \"2\" puis Entree pour trusty64 " choixBox
 
 	if [ "$choixBox" = "1" ];then
-		$Box="ubuntu/xenial64"
+		Box="ubuntu/xenial64"
 	elif [ "$choixBox" = "2" ];then
-		$Box="ubuntu/trusty64"
+		Box="ubuntu/trusty64"
 	else
 		echo "Veuillez essayer de nouveau en faisant attention aux consignes. "
 done
